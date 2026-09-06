@@ -1,0 +1,21 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.activon-global.com/
+name: ACTIVON plans and pricing
+plan_count: 0
+plans: []
+note: >-
+  ACTIVON sells specialty chemical ingredients business-to-business and publishes no pricing
+  of any kind — no product price list, no API plans, and no API to price. Both corporate
+  sites route commercial contact through a form
+  (https://www.activon-global.com/contact, HTTP 200). Recorded as an honest zero:
+  there is no plans surface to measure, and no Pricing pointer is emitted.
+searched:
+  - url: https://www.activon-global.com/
+    status: 200
+  - url: https://www.activon-global.com/contact
+    status: 200
+  - url: https://www.activon-global.com/cosmetic-ingredients
+    status: 200
+  - url: https://www.activon.kr/
+    status: 200

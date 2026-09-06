@@ -1,0 +1,27 @@
+generated: '2026-09-06'
+method: probed
+source: https://www.activon-global.com/_api/mcp
+name: ACTIVON rate limits
+limit_count: 0
+rate_limits: []
+note: >-
+  No published rate limits. ACTIVON documents no API, so there are no provider-stated limits
+  to record. The one live machine surface — the Wix site MCP endpoint — returned no
+  rate-limit headers on an anonymous tools/list call: the observed response headers were
+  mcp-session-id, etag, cache-control, x-wix-request-id, x-robots-tag and Cloudflare edge
+  headers, with no RateLimit-*, X-RateLimit-* or Retry-After present. Any limiting there is
+  the Wix platform's and is undocumented for this site. Recorded as an honest zero.
+observed_headers:
+  url: https://www.activon-global.com/_api/mcp
+  status: 200
+  rate_limit_headers_present: false
+  headers_seen:
+    - mcp-session-id
+    - etag
+    - pragma
+    - cache-control
+    - x-wix-request-id
+    - x-robots-tag
+    - strict-transport-security
+    - cf-cache-status
+  checked: '2026-09-06'

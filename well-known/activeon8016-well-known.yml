@@ -1,0 +1,90 @@
+generated: '2026-09-06'
+method: probed
+source: live HTTP probe of every host this record knows
+name: ACTIVON well-known document probe
+summary: >-
+  Every /.well-known/ path in the pipeline's named list was probed on both of ACTIVON's
+  hosts on 2026-09-06. NOTHING was served. No pointer of type WellKnown or SecurityTxt is
+  emitted for this provider, because this file records an absence, not a presence.
+  Note the two hosts fail differently: activon.kr returns a 404 HTML error page, while
+  www.activon-global.com is a Wix site whose edge answers 400 with an HTML error page for
+  unknown paths — neither is a document.
+hosts:
+  - host: www.activon-global.com
+    note: Wix-hosted corporate site; unknown paths answer 400 with an HTML error page.
+    documents:
+      - path: /.well-known/security.txt
+        status: 400
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 400
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 400
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 400
+        file: null
+      - path: /.well-known/api-catalog
+        status: 400
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 400
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 400
+        file: null
+      - path: /.well-known/agent.json
+        status: 400
+        file: null
+  - host: www.activon.kr
+    note: Korean corporate site; unknown paths answer 404 with an HTML error page.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: activon-global.com
+    note: Apex; redirects to www.
+    documents:
+      - path: /.well-known/security.txt
+        status: 400
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 400
+        file: null
+  - host: activon.kr
+    note: Apex; serves the same site as www.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+also_probed:
+  - url: https://www.activon-global.com/_api/mcp/.well-known/oauth-protected-resource
+    status: 404
+    note: MCP endpoint publishes no RFC 9728 protected-resource metadata; it is anonymous.
+a2a:
+  agent_card_found: false
+  note: >-
+    No A2A agent card on any host at either /.well-known/agent-card.json or the legacy
+    /.well-known/agent.json. No a2a/ artifact was written and no AgentCard pointer emitted.

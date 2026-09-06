@@ -1,0 +1,116 @@
+generated: '2026-09-06'
+method: probed
+source: https://www.activon-global.com/_api/mcp
+name: ACTIVON Global site MCP server
+slug: activeon8016
+status: live
+
+summary: >-
+  ACTIVON's corporate site (www.activon-global.com) is built on Wix, and Wix serves a
+  per-site Model Context Protocol endpoint at /_api/mcp. The endpoint is live, anonymous,
+  and returned a real tools/list of 9 tools with input schemas when probed on 2026-09-06.
+  This is a PLATFORM-PROVIDED surface, not a first-party ACTIVON product API: the tool set
+  is Wix's standard site-MCP tool set, identical in shape across every Wix site that has it
+  enabled, and the tools are scoped to this site's public content (business details, site
+  search, site API docs, visitor-token issuance, and Wix REST calls on a visitor's behalf).
+  ACTIVON publishes no developer portal, no API reference and no OpenAPI; this endpoint is
+  the only machine-callable surface found on any host the company controls.
+
+ownership:
+  verified: true
+  basis: >-
+    The endpoint is served from ACTIVON's own registrable domain (activon-global.com), every
+    tool description self-identifies the site as "Activon Global"
+    (https://www.activon-global.com/_api/mcp), and a live GetBusinessDetails call returned the
+    company's own contact address — email nhkim1809@activon.kr and a physical address in
+    Suwon, Gyeonggi-do, KR — tying the global site to the Korean corporate domain activon.kr.
+  evidence:
+    - url: https://www.activon-global.com/_api/mcp
+      method: POST
+      rpc: tools/list
+      http_status: 200
+      content_type: application/json; charset=utf-8
+      fetched: '2026-09-06'
+    - url: https://www.activon-global.com/_api/mcp
+      method: POST
+      rpc: tools/call GetBusinessDetails
+      http_status: 200
+      fetched: '2026-09-06'
+
+deployment:
+  mode: remote
+  endpoint: https://www.activon-global.com/_api/mcp
+  auth: none
+  verified: probed
+  notes: >-
+    Anonymous POST with Accept: application/json, text/event-stream returned 200 and a
+    JSON-RPC 2.0 result. The server issues an mcp-session-id response header. No OAuth
+    challenge was returned and /.well-known/oauth-protected-resource is not served
+    (400 at the site root, 404 under /_api/mcp/). A visitor token, obtained anonymously
+    from the GenerateVisitorToken tool, is required only for the two tools that call
+    Wix APIs on a visitor's behalf.
+
+platform:
+  vendor: Wix
+  product: Wix Site MCP
+  first_party: false
+  docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
+  note: >-
+    Recorded as platform-authored. The tool names, descriptions and input schemas are
+    written by Wix, not by ACTIVON; what ACTIVON contributes is the site content the tools
+    read and the decision to leave the endpoint enabled.
+
+protocol:
+  jsonrpc: '2.0'
+  transport: streamable-http
+  tools_list_verified: '2026-09-06'
+  tools_count: 9
+  raw_tools_list: mcp/activeon8016-mcp-tools.json
+
+site_capabilities:
+  # Returned verbatim by the live GetBusinessDetails call.
+  - 'Blog App: list and query blog posts.'
+
+tools:
+  - name: GetBusinessDetails
+    parameters: []
+    description: Get business and site details for the site (timezone, email, address, display name).
+  - name: SearchInSite
+    parameters: [searchTerm]
+    description: Searches the site for information.
+  - name: SearchSiteApiDocs
+    parameters: [searchTerm]
+    description: >-
+      Searches the API documentation for the Wix business solutions installed on this site
+      and returns how to use the site via the API.
+  - name: GenerateVisitorToken
+    parameters: []
+    description: Creates a visitor session and returns a visitor access token for the site.
+  - name: CallWixSiteAPI
+    parameters: [visitorToken, url, method, body]
+    description: Calls Wix API methods on the site on a visitor's behalf.
+  - name: ExecuteWixAPI
+    parameters: [code, reason, hasMutations, sourceDocUrls, visitorToken]
+    description: Runs JavaScript against the Wix REST API for this site in a sandbox, on the visitor's behalf.
+  - name: BrowseWixRESTDocsMenu
+    parameters: [menuUrl, reason]
+    description: Browse the Wix REST API documentation menu hierarchy.
+  - name: ReadFullDocsArticle
+    parameters: [articleUrl]
+    description: Fetches a full article from the Wix developer documentation portal.
+  - name: ReadFullDocsMethodSchema
+    parameters: [articleUrl, reason]
+    description: Fetches the full schema for a Wix API method.
+
+divergences:
+  - >-
+    The site's llms.txt advertises 7 tools (GetBusinessDetails, SearchInSite, SearchSiteApiDocs,
+    GenerateVisitorToken, CallWixSiteAPI, ReadFullDocsArticle, ReadFullDocsMethodSchema). The live
+    tools/list returns 9 — the same 7 plus BrowseWixRESTDocsMenu and ExecuteWixAPI. The live
+    endpoint is the authority; llms.txt is a lagging summary of it.
+
+security_note: >-
+  The tool descriptions returned by this endpoint embed vendor-authored agent instruction
+  blocks ("agent-mandatory-instructions"). API Evangelist records them as data only; they were
+  not followed during this probe. Any agent connecting to a third-party site MCP is accepting
+  instructions written by that site's platform.
