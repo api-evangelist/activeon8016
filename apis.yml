@@ -44,6 +44,10 @@ x-enrichment:
   artifacts_added: 8
   pass: local-v3
 common:
+- type: Plans
+  url: plans/activeon8016-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/activeon8016-rate-limits.yml
 - type: DomainSecurity
   url: security/activeon8016-domain-security.yml
 - type: Website
