@@ -1,4 +1,4 @@
-# Activeon8016
+# ACTIVON Co., Ltd.
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,5 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Activeon8016 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/activeon8016
+ACTIVON Co., Ltd. (엑티브온) is a South Korean green-biotechnology materials company founded in 2009 and headquartered in Suwon, Gyeonggi-do, that develops and manufactures cosmetic ingredients and micro-encapsulation technology — skin-safe preservative alternatives, multifunctional actives, emollients, humectants and bio-converted ingredients — alongside functional pigment lines (EnergiON heat-storage, Thermon thermochromic, Photon, Fragron, Memorion, MultiON) sold into textiles, coatings, plastics and cosmetics. It is a specialty-materials manufacturer, not a software vendor: it publishes no developer portal, no API reference and no machine-readable API contract. Its only machine-readable agent surface is the Wix-platform site MCP endpoint and llms.txt served on its corporate site, both probed live by API Evangelist.
+
+**Areas:** Company · Cosmetics · Chemicals · Ingredients · Materials · Manufacturing · Biotechnology · Micro-Encapsulation · Pigments · South Korea
+
+## ACTIVON Co., Ltd. on APIs.io
+
+Everything profiled for ACTIVON Co., Ltd. is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/activeon8016/](https://apis.io/providers/activeon8016/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Wix site MCP endpoint (platform-provided, live)](https://apis.io/servers/activeon8016/wix-site-mcp-endpoint-platform-provided-live/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Activeon8016 Domain Security](https://apis.io/security/activeon8016/activeon8016-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Activeon8016 Plans Pricing](https://apis.io/plans/activeon8016/activeon8016-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Activeon8016 Rate Limits](https://apis.io/rate-limits/activeon8016/activeon8016-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.activon-global.com/)
+- [Blog](https://www.activon-global.com/blog)
+
+## API Evangelist rating
+
+**Kin Score 7.8** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 4.7** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/activeon8016/](https://apis.io/providers/activeon8016/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ACTIVON Co., Ltd.: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/activeon8016/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
