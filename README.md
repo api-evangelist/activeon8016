@@ -86,19 +86,19 @@ Model Context Protocol servers that expose the API to agents.
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Activeon8016 Domain Security](https://apis.io/security/activeon8016/activeon8016-domain-security/)
+- [ACTIVON Co., Ltd. Domain Security](https://apis.io/security/activeon8016/activeon8016-domain-security/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Activeon8016 Plans Pricing](https://apis.io/plans/activeon8016/activeon8016-plans-pricing/)
+- [ACTIVON Co., Ltd. Plans Pricing](https://apis.io/plans/activeon8016/activeon8016-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Activeon8016 Rate Limits](https://apis.io/rate-limits/activeon8016/activeon8016-rate-limits/)
+- [ACTIVON Co., Ltd. Rate Limits](https://apis.io/rate-limits/activeon8016/activeon8016-rate-limits/)
 
 ## Where to find this API
 
@@ -109,7 +109,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 7.8** — minimal · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 7.0** — minimal · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
@@ -120,7 +120,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Developer ergonomics | 2.4 |
 | Access clarity | 0.0 |
 
-**Agent readiness 4.7** — human-only
+**Agent readiness 4.6** — human-only
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -143,8 +143,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+**Regulatory alignment 4.9** — Horizontal (data, software, accessibility, platform)
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/activeon8016/](https://apis.io/providers/activeon8016/).
 
